@@ -9,9 +9,10 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "paths": {
-      "lazy-modules": [
-        "dist/lazy-modules"
-      ]
+      "@lazy/lazy-a": ["projects/lazy-modules/src/lib/lazy-a/public-api.ts"],
+      "@lazy/lazy-b": ["projects/lazy-modules/src/lib/lazy-b/public-api.ts"],
+      "@lazy/lazy-c": ["projects/lazy-modules/src/lib/lazy-c/public-api.ts"],
+      "@lazy/lazy-d": ["projects/lazy-modules/src/lib/lazy-d/public-api.ts"],
     },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
