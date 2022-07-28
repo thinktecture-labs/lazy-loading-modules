@@ -1,1 +1,8 @@
-<p>lazy-container works!</p>
+<div class="section" *ngFor="let section of sectionVms$ |async">
+  <ng-container *ngIf="section.componentPortal; else placeholder">
+    <ng-container *cdkPortalOutlet="section.componentPortal!"></ng-container>
+  </ng-container>
+  <ng-template #placeholder>
+    <p><strong>PLACEHOLDER</strong></p>
+  </ng-template>
+</div>
