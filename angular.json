@@ -102,6 +102,37 @@
           }
         }
       }
+    },
+    "lazy-modules": {
+      "projectType": "library",
+      "root": "projects/lazy-modules",
+      "sourceRoot": "projects/lazy-modules/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/lazy-modules/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lazy-modules/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/lazy-modules/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lazy-modules/src/test.ts",
+            "tsConfig": "projects/lazy-modules/tsconfig.spec.json",
+            "karmaConfig": "projects/lazy-modules/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }
