@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LazyBComponent } from './lazy-b/lazy-b.component';
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {LazyBComponent} from './lazy-b/lazy-b.component';
+import {SectionService} from "../../../../../src/app/section.service";
 
 
 @NgModule({
@@ -13,4 +13,8 @@ import { LazyBComponent } from './lazy-b/lazy-b.component';
   ],
   exports: [LazyBComponent]
 })
-export class LazyBModule { }
+export class LazyBModule {
+  constructor(sectionService: SectionService) {
+    sectionService.register("B", LazyBComponent);
+  }
+}
