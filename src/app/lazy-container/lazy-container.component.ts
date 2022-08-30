@@ -14,7 +14,7 @@ export class LazyContainerComponent implements OnInit {
 
   public sectionVms$: BehaviorSubject<SectionViewModel[]> = new BehaviorSubject<SectionViewModel[]>([]);
 
-  private readonly sectionsToShow: string[] = ["A", "C", "D"];
+  private readonly sectionsToShow: string[] = ["A", "B", "C", "D"];
 
   constructor(private readonly moduleLoaderService: ModuleLoaderService, private readonly sectionService: SectionService) {
   }
